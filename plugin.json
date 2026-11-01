@@ -1,0 +1,15 @@
+{
+  "api": 2,
+  "id": "ssh",
+  "name": "SSH",
+  "version": "0.1.0",
+  "publisher": "V2Mac",
+  "description": "Connect to your servers through this mini VM's exit with the SSH keys on your Mac. The keys never enter the VM. OpenSSH comes from Debian.",
+  "icon": "icon.svg",
+  "display": "pty",
+  "packages": ["openssh-client"],
+  "launch": { "cmd": ["/usr/local/bin/start.sh"] },
+  "permissions": ["ssh-agent"],
+  "changelog": "First release: OpenSSH from Debian, updated by Debian, using your Mac's ssh-agent after V2Mac asks.",
+  "securityNotes": "ssh-agent lets this app ask your Mac to sign with your keys while it is open and after you allow it; the keys stay on the Mac. Agent forwarding to servers is turned off."
+}
